@@ -11,6 +11,9 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## Mock Server run
+Find `server/` folder and run `json-server ./db.json --port 3030` or `npx json-server ./db.json --port 3030`
+
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
