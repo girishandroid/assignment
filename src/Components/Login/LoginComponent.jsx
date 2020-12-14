@@ -29,16 +29,13 @@ export default function LoginComponent() {
     function handleSubmit(event) {
       event.preventDefault();
       fakeLoginApi(email, password)
-      .then(({status, admin}) => history.push(admin ? '/users' : '/products'))
+      .then(({status, admin}) => history.push('/article'))
       .catch(() => setValidPassword(false))
     }
 
     const fakeLoginApi = (email, password) => new Promise((resolve, reject) => {
-        if (email === 'admin@xyz.com' && password === 'Admin_007') {
-            window.localStorage.setItem('username', email)
-            resolve({status: 200, admin: true})
-        } else if (email === 'admin@xyz.com') {
-            reject();
+        if (email === '' || password === '') {
+          reject();
         } else {
             window.localStorage.setItem('username', email);
             resolve({status: 200, admin: false})

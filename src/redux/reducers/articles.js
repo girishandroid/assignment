@@ -10,15 +10,11 @@ export const getArticleList = (state, articles) => ({
     type: ARTICLE_LIST,
     ...articles
 })
-export const getArticleList = (state, articles) => ({
-    ...state,
-    type: ARTICLE_LIST,
-    ...articles
-})
+
 async function fetchApi() {
-    return fetch('http://localhost:3030/');
+    return fetch('http://localhost:3030/articles');
 }
-export const fetchUserList = () => (dispatch, getState) => {
+export const fetchArticleList = () => (dispatch, getState) => {
     const state = getState();
     dispatch(getArticleList(state,{articles: {status: LOADING, data: []}}));
     fetchApi()

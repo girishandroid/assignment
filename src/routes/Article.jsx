@@ -1,4 +1,5 @@
+import ArticleComponent from "../Components/Article/ArticleComponent";
 
-const ArticlePage = () => <div>Articles Page...</div>;
+const ArticlePage = () => <ArticleComponent />;
 
 export default ArticlePage;

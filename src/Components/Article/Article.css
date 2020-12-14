@@ -1,0 +1,22 @@
+.Article.list-group {
+    flex-direction: unset;
+    overflow: scroll;
+}
+
+.Article .list-group-item {
+    width: fit-content;
+}
+
+.Article .card {
+    width: 18rem;
+}
+
+.Article .card .card-body {
+    max-height: 18rem;
+    overflow: scroll;
+}
+
+.detail-card img {
+    width: 40%;
+    align-self: center;
+}
