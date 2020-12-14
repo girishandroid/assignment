@@ -4,5 +4,6 @@ export const INITIAL = {
     articles: {
         status: LOADING,
         data: []
-    }
+    },
+    article: {}
 }

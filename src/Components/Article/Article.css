@@ -15,8 +15,3 @@
     max-height: 18rem;
     overflow: scroll;
 }
-
-.detail-card img {
-    width: 40%;
-    align-self: center;
-}

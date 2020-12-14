@@ -8,6 +8,7 @@ import { PrivateRoute } from "./routes/index";
 
 const LoginPage = React.lazy(() => import('./routes/Login'));
 const ArticlePage = React.lazy(() => import('./routes/Article'));
+const ArticleDetailPage = React.lazy(() => import('./routes/ArticleDetail'));
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Switch>
               <Route exact path="/login" component={LoginPage}/>
               <PrivateRoute path="/article" component={ArticlePage}/>
+              <PrivateRoute path="/article-detail" component={ArticleDetailPage}/>
               <Route
                 path="*"
                 render={() => <Redirect to="/login" />}
