@@ -1,6 +1,5 @@
-import moment from 'moment';
 import React, { useEffect, useState } from 'react';
-import { Button, Card, ListGroup, Table } from 'react-bootstrap';
+import { Button, Card, ListGroup } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { LOADING, fetchArticleList, FAILED } from '../../redux/reducers/articles';
 import './Article.css';
@@ -11,10 +10,9 @@ export default function ArticleComponent() {
     const {data, status} = articles;
     const [cardSelectedItem, setSelectedItem] = useState();
 
-    useEffect(() => {
-        dispatch(fetchArticleList())
-    }, [])
-    useEffect(() => setSelectedItem(data && data[0]), [data])
+    useEffect(() => dispatch(fetchArticleList()), []);
+
+    useEffect(() => setSelectedItem(data && data[0]), [data]);
 
     return (<React.Fragment>
         {status === LOADING ? <div>Loading ...</div>
@@ -55,5 +53,5 @@ export default function ArticleComponent() {
                     }
             </ListGroup>
         </React.Fragment>)}
-    </React.Fragment>)
+    </React.Fragment>);
 }
